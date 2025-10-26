@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!doctype html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Mirror — Accept Yourself&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Reset-ish */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>* { box-sizing: border-box; margin: 0; padding: 0; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: #111; color: #fff; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Layout */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>min-height: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>place-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.mirror {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: min(900px, 96vw);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>aspect-ratio: 16/9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #000;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.04);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>video#camera {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>object-fit: cover;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>/* mirror (flip horizontally) */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: scaleX(-1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>-webkit-transform: scaleX(-1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>/* smooth edges on transform */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>will-change: transform;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Overlay phrase */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.overlay {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 12%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: translateX(-50%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.2));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(4px) saturate(1.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>-webkit-backdrop-filter: blur(4px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>pointer-events: none; /* clicks go through to buttons if added later */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.overlay .phrase {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: clamp(14px, 2.6vw, 24px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 0.2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>line-height: 1.2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-shadow: 0 2px 12px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.03);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Controls area */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.controls {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>right: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>bottom: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>appearance: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.06);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 8px 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>backdrop-filter: blur(6px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>button:active { transform: translateY(1px); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>button.secondary { background: rgba(255,255,255,0.03); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* Message when no camera */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.no-camera {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>place-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hint {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>opacity: 0.85;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 420px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.overlay { top: 8%; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>button { padding: 6px 10px; font-size: 13px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="mirror" id="mirror"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;video id="camera" autoplay playsinline muted aria-label="Your camera mirror view"&gt;&lt;/video&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="overlay" id="overlay"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="phrase"&gt;Smile and accept who you are- because you are UNIQUE!&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="controls" id="controls" aria-hidden="false"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button id="togglePhrase"&gt;Hide phrase&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button id="snapshot" class="secondary"&gt;Take snapshot&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- shown only if camera unavailable --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="no-camera" id="noCamera" style="display:none;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:18px; font-weight:700;"&gt;Camera not available&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="hint"&gt;Make sure you've allowed camera access and opened this page via HTTPS or localhost. If you're on a phone, grant camera permission in the browser settings.&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>(function () {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const video = document.getElementById('camera');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const overlay = document.getElementById('overlay');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const toggleBtn = document.getElementById('togglePhrase');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const snapshotBtn = document.getElementById('snapshot');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const noCamera = document.getElementById('noCamera');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const controls = document.getElementById('controls');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Request the user camera (prefer front-facing camera)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>async function startCamera() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const constraints = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>audio: false,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>video: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>facingMode: 'user', // front camera if available</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>width: { ideal: 1280 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>height: { ideal: 720 }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const stream = await navigator.mediaDevices.getUserMedia(constraints);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>video.srcObject = stream;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>video.onloadedmetadata = () =&gt; video.play();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>noCamera.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>controls.style.display = 'flex';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} catch (err) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>console.error('Camera error:', err);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>noCamera.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// hide video element when no camera</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>video.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>overlay.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>controls.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Toggle phrase visibility</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let phraseVisible = true;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>toggleBtn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>phraseVisible = !phraseVisible;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>overlay.style.display = phraseVisible ? 'block' : 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>toggleBtn.textContent = phraseVisible ? 'Hide phrase' : 'Show phrase';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Take snapshot (downloads a small mirrored image)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>snapshotBtn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (!video || !video.srcObject) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const w = video.videoWidth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const h = video.videoHeight;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const canvas = document.createElement('canvas');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>canvas.width = w;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>canvas.height = h;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const ctx = canvas.getContext('2d');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Mirror the image back to normal (since the video is flipped via CSS)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.translate(w, 0);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.scale(-1, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>ctx.drawImage(video, 0, 0, w, h);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Draw phrase text if visible</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (phraseVisible) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const text = ‘Smile and accept who you are because- you are UNIQUE!’;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const maxFont = Math.round(w / 20);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.font = `${maxFont}px system-ui, Arial`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.textAlign = 'center';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.fillStyle = 'rgba(255,255,255,0.95)';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.shadowColor = 'rgba(0,0,0,0.7)';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.shadowBlur = 12;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const x = w / 2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const y = Math.round(h * 0.12);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// draw with background pill</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const padding = 18;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const metrics = ctx.measureText(text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const textWidth = metrics.width;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.fillStyle = 'rgba(0,0,0,0.45)';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.fillRect(x - textWidth/2 - padding, y - maxFont, textWidth + padding*2, maxFont + padding/1.6);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// draw text</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.fillStyle = '#fff';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>ctx.fillText(text, x, y);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Create a download link</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>canvas.toBlob(blob =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (!blob) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const url = URL.createObjectURL(blob);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const a = document.createElement('a');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>a.href = url;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>a.download = 'mirror-snapshot.png';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>document.body.appendChild(a);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>a.click();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>a.remove();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>URL.revokeObjectURL(url);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}, 'image/png');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Start automatically</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (navigator.mediaDevices &amp;&amp; navigator.mediaDevices.getUserMedia) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>startCamera();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>noCamera.style.display = 'block';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>controls.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>video.style.display = 'none';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Helpful: stop camera when page hidden to save resources</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.addEventListener('visibilitychange', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (document.hidden) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const stream = video.srcObject;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (stream &amp;&amp; stream.getTracks) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>stream.getTracks().forEach(t =&gt; t.enabled = false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const stream = video.srcObject;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (stream &amp;&amp; stream.getTracks) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>stream.getTracks().forEach(t =&gt; t.enabled = true);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>})();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
